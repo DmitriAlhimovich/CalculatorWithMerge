@@ -9,7 +9,7 @@ namespace CalculatorWithMergerRebase
             Console.WriteLine("Input number:");
             var number1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Input operation (+, -):");
+            Console.WriteLine("Input operation (+, -, *):");
 
             var operation = Console.ReadLine()[0];
 
@@ -27,6 +27,9 @@ namespace CalculatorWithMergerRebase
                     break;
                 case '-':
                     result = number1 - number2;
+                    break;
+                case '*':
+                    result = number1 * number2;
                     break;
                 default:
                     throw new ArgumentException($"Operation not supported: {operation}");
